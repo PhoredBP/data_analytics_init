@@ -1,5 +1,5 @@
 import math
-
+# Analyse des ventes : statistiques et détection d'anomalies
 def analyser_ventes(transactions):
     # 1. Nettoyage : on garde uniquement les montants > 0
     valides = [t for t in transactions if t > 0]
@@ -46,3 +46,14 @@ if __name__ == "__main__":
     print("=== Analyse des ventes ===")
     for cle, valeur in resultats.items():
         print(f"{cle} : {valeur}")
+
+
+def detecter_outliers(outliers):
+    if outliers is None or len(outliers) == 0:
+        print("pas d'outliers")
+    else:
+        return(outliers)
+
+print("=== Détection des outliers ===")
+outliers=detecter_outliers("anomalies")
+print(f"outliers, {outliers}")
